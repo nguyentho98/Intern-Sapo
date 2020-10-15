@@ -1,0 +1,27 @@
+
+.cus-info-base{
+    border: 1px solid rgba(224,224,224,1);
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.cus-info-address{
+    border: 1px solid rgba(224,224,224,1);
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+}
+.cus-info-additional{
+    border: 1px solid rgba(224,224,224,1);
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+}
+.footer{
+    border-top: 1px solid rgba(224,224,224,1);
+    margin-top: 100px;
+}
+/* button{
+    float: right;
+} */

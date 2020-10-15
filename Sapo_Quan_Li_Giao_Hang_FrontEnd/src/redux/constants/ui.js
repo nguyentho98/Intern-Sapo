@@ -1,0 +1,1 @@
+export const MINI_ACTIVE = 'MINI_ACTIVE';

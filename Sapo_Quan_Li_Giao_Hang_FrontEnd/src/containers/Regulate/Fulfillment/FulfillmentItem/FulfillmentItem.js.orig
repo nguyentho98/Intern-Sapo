@@ -1,0 +1,202 @@
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
+import { Checkbox } from 'pretty-checkbox-react';
+import 'pretty-checkbox';
+import { connect } from 'react-redux';
+import history from '../../../../utils/history';
+const FulfillmentItem = (props) => {
+  const [checked, setChecked] = useState(props.stt);
+  const { fulfillment } = props;
+  const handleChange = (e) => {
+    setChecked(e.target.checked);
+    if (checked !== e.target.checked) {
+      props.getItemChecked(
+        fulfillment.id,
+        e.target.checked,
+        fulfillment.active
+      );
+    }
+  };
+
+  const statuss = [
+    { id: 'Đang hoạt động', color: '#1e88e5' },
+    { id: 'Không hoạt động', color: '#f44336' },
+  ];
+  const status = [
+    { content: 'Tạo phiếu', color: '#f9a825' },
+    { content: 'Chờ lấy hàng', color: '#f9a825' },
+    { content: 'Đã ở trong kho', color: 'yellow' },
+    { content: 'Đang giao hàng', color: '#1e88e5' },
+    { content: 'Hoàn thành', color: '#4caf50' },
+    { content: 'Đã hủy', color: '#f44336' },
+  ];
+  useEffect(() => {
+    console.log(fulfillment,"done");
+    if (props.stt && !checked) {
+      setChecked(true);
+      props.getItemChecked(fulfillment.id, true, fulfillment.active);
+    }
+    if (!props.stt && checked) {
+      setChecked(false);
+      props.getItemChecked(fulfillment.id, false);
+    }
+    if (props.stt === 0) {
+      setChecked(false);
+      props.getItemChecked(fulfillment.id, false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.stt]);
+
+<<<<<<< HEAD
+=======
+  const detailFUL = (id) =>{
+    history.push(`/admin/fulfillDetail/${id}`)
+  }
+  function formatMoney(money) {
+    money = money.toLocaleString("vi", { style: "currency", currency: "VND" });
+    return money;
+  }
+
+>>>>>>> master
+  return (
+    <tr className='cateItem-h' style={{ lineHeight: '50px' }}>
+      <th scope='col'>
+        <Checkbox
+          className='pretty-checkbox'
+          shape='curve'
+          color='info-o'
+          onChange={handleChange}
+          checked={checked}
+          icon={<i className={`fa fa-check`} />}
+        ></Checkbox>
+      </th>
+      <td>
+        <NavLink to={`/admin/fulfillDetail/${fulfillment.id}`}>
+          {fulfillment.code}
+        </NavLink>
+      </td>
+      <td>
+        {fulfillment.shippingStatus === 2 ? (
+          <div
+            style={{
+              width: '95px',
+              textAlign: 'center',
+              backgroundColor: status[2].color,
+              borderRadius: '20px',
+              height: '40px',
+            }}
+          >
+            <h6
+              style={{
+                color: 'black',
+                paddingTop: '14px',
+                fontSize: '11px',
+              }}
+            >
+              {status[2].content}
+            </h6>
+          </div>
+        ) : fulfillment.shippingStatus === 1 ? (
+          <div
+            style={{
+              width: '95px',
+              textAlign: 'center',
+              backgroundColor: status[1].color,
+              borderRadius: '20px',
+              height: '40px',
+            }}
+          >
+            <h6
+              style={{
+                color: 'black',
+                paddingTop: '14px',
+                fontSize: '11px',
+              }}
+            >
+              {status[1].content}
+            </h6>
+<<<<<<< HEAD
+          </div>
+        ) : (
+          ''
+        )}
+      </td>
+      <td>{fulfillment.transportFee}</td>
+      <td>
+        {JSON.parse(
+          fulfillment.shippingFrom !== undefined
+            ? fulfillment.shippingFrom
+            : '{}'
+        ).address
+          ? JSON.parse(
+              fulfillment.shippingFrom !== undefined
+                ? fulfillment.shippingFrom
+                : '{}'
+            ).address
+          : '' +
+            ' ' +
+            JSON.parse(
+              fulfillment.shippingFrom !== undefined
+                ? fulfillment.shippingFrom
+                : '{}'
+            ).ward
+          ? JSON.parse(
+              fulfillment.shippingFrom !== undefined
+                ? fulfillment.shippingFrom
+                : '{}'
+            ).ward
+          : '' +
+            ' ' +
+            JSON.parse(
+              fulfillment.shippingFrom !== undefined
+                ? fulfillment.shippingFrom
+                : '{}'
+            ).district
+          ? JSON.parse(
+              fulfillment.shippingFrom !== undefined
+                ? fulfillment.shippingFrom
+                : '{}'
+            ).district
+          : '' +
+            ' ' +
+            JSON.parse(
+              fulfillment.shippingFrom !== undefined
+                ? fulfillment.shippingFrom
+                : '{}'
+            ).province
+          ? JSON.parse(
+              fulfillment.shippingFrom !== undefined
+                ? fulfillment.shippingFrom
+                : '{}'
+            ).province
+          : ''}
+      </td>
+      <td>{fulfillment.totalMoney} VNĐ</td>
+=======
+            </div>
+          ) : (
+            ""
+          )}</td>
+      <td>{formatMoney(fulfillment.transportFee)}</td>
+      <td>
+        {fulfillment.shippingFromEntity.address
+      +' '+fulfillment.shippingFromEntity.ward
+      +' '+fulfillment.shippingFromEntity.district
+      +' '+fulfillment.shippingFromEntity.province}</td>
+      <td>{''}</td>
+      <td>{formatMoney(fulfillment.totalMoney)}</td>
+>>>>>>> master
+    </tr>
+  );
+};
+FulfillmentItem.propTypes = {
+  category: PropTypes.object,
+};
+const mapStateToProps = (state) => {
+  return {
+    stt: state.statusReducer.sttCheckBox,
+  };
+};
+
+export default connect(mapStateToProps)(FulfillmentItem);

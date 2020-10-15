@@ -1,0 +1,32 @@
+2020-09-14 13:45:41.698  INFO 11532 --- [main] c.sapo.qlgiaohang.QlgiaohangApplication  : Starting QlgiaohangApplication on ManhND-tt with PID 11532 (C:\Users\MANH\Desktop\it05-team2\Sapo-Quan_Li_Giao_Hang\target\classes started by MANH in C:\Users\MANH\Desktop\it05-team2\Sapo-Quan_Li_Giao_Hang)
+2020-09-14 13:45:41.703  INFO 11532 --- [main] c.sapo.qlgiaohang.QlgiaohangApplication  : No active profile set, falling back to default profiles: default
+2020-09-14 13:45:42.986  INFO 11532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-09-14 13:45:42.988  INFO 11532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-09-14 13:45:43.011  INFO 11532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 JDBC repository interfaces.
+2020-09-14 13:45:43.023  INFO 11532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-09-14 13:45:43.023  INFO 11532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-14 13:45:43.033  INFO 11532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 JPA repository interfaces.
+2020-09-14 13:45:43.681  INFO 11532 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-14 13:45:43.692  INFO 11532 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-14 13:45:43.693  INFO 11532 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-14 13:45:43.859  INFO 11532 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-14 13:45:43.860  INFO 11532 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2034 ms
+2020-09-14 13:45:44.025  INFO 11532 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-14 13:45:44.035  INFO 11532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-14 13:45:44.227  INFO 11532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-14 13:45:44.311  INFO 11532 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-14 13:45:44.394  WARN 11532 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-14 13:45:44.431  INFO 11532 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-14 13:45:44.677  INFO 11532 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-14 13:45:44.915  INFO 11532 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-09-14 13:45:45.141  INFO 11532 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5c40b01a-a5f1-4065-abbb-32213a7782db
+
+2020-09-14 13:45:45.282  INFO 11532 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2aa14ae6, org.springframework.security.web.context.SecurityContextPersistenceFilter@448c92fc, org.springframework.security.web.header.HeaderWriterFilter@26e8ff8c, org.springframework.security.web.csrf.CsrfFilter@18dcb8a7, org.springframework.security.web.authentication.logout.LogoutFilter@3520958b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@355ce6a6, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3db65c0d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4be490da, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5287ba5f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17c0274c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34045582, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4168f3d9, org.springframework.security.web.session.SessionManagementFilter@590d6c76, org.springframework.security.web.access.ExceptionTranslationFilter@7f0f84d4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c1d57bc]
+2020-09-14 13:45:45.353  INFO 11532 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-14 13:45:45.357  INFO 11532 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-09-14 13:45:45.358  INFO 11532 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-09-14 13:45:45.371  INFO 11532 --- [main] c.sapo.qlgiaohang.QlgiaohangApplication  : Started QlgiaohangApplication in 4.683 seconds (JVM running for 8.512)
+2020-09-14 13:45:46.335  INFO 11532 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-14 13:45:46.343  INFO 11532 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
